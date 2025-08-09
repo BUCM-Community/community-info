@@ -5,15 +5,16 @@ Lang: [**简体中文**](#user-content-zh-cn) | [**English**](#user-content-en-u
 
 <div>
 <p align="center">
-当前版本为 <strong>Build 0.6.250710</strong>（详细信息见第十八条-章程修订，正式版移除该区块）
+当前版本为 <strong>Build 0.6.250801</strong>（详细信息见第十八条-章程修订，正式版移除该区块）
 </p>
 
 ***TODO***：
 - 修改管理团队任免，目前不完善且有点混乱
 - 添加社区成员身份注册机制
-- 完善投票机制
-- 完善成员身份体系
-- 完善贡献评价和利益分配机制
+- **完善投票机制**
+- **完善成员身份体系**
+- **完善贡献评价和利益分配机制**
+- 完善解散流程
 - 完善文内跳转和外链跳转
 - 图片
 - 添加英文翻译版
@@ -45,8 +46,9 @@ Lang: [**简体中文**](#user-content-zh-cn) | [**English**](#user-content-en-u
     - [*第十七条 违纪违规处理*](#user-content-article-17-zh-cn)
 - [**第四章 附则**](#user-content-chapter-4-zh-cn)
     - [*第十八条 章程修订*](#user-content-article-18-zh-cn)
-    - [*第十九条 生效与解释权*](#user-content-article-19-zh-cn)
-    - [*第二十条 章程修订表决情况*](#user-content-article-20-zh-cn)
+    - [*第十九条 社区解散*](#user-content-article-19-zh-cn)
+    - [*第二十条 生效与解释权*](#user-content-article-20-zh-cn)
+    - [*第二十一条 章程修订表决情况*](#user-content-article-21-zh-cn)
 
 </details>
 
@@ -85,7 +87,7 @@ Lang: [**简体中文**](#user-content-zh-cn) | [**English**](#user-content-en-u
 
 #### 2.1 社区性质
 
-本社区属于 **公益性** 学术科技类中文社区。
+本社区属于 **非营利性** 学术科技类组织，所有资产及收益仅用于章程规定目标。
 
 #### 2.2 活动领域
 
@@ -119,19 +121,23 @@ Lang: [**简体中文**](#user-content-zh-cn) | [**English**](#user-content-en-u
 
 #### 5.1 概述
 
-本条列举本社区的一级结构并分述各结构成立或所属成员的就任、卸任和职责。本社区的基本结构为管理团队、技术委员会和特别兴趣小组，下面以一个包含二级结构的组织结构图进行展示。
+本条列举本社区的一级结构并分述各结构成立或所属成员的就任、卸任和职责。
+
+本社区的基本结构为管理团队、技术委员会和特别兴趣小组，下面以一个包含二级结构的组织结构图进行展示。
 
 ```mermaid
-graph TB;
-    A[社区] --> B[管理团队];
-    A --> C[技术委员会];
-    A --> D[特别兴趣小组];
-
-    B --> B1[运营部];
-    B --> B2[算法与竞赛部];
-    B --> B3[开发部];
-    B --> B4[维护部];
-    B --> B5[办公室];
+graph TB
+    A[社区] --> B[理事会]
+    subgraph 管理团队
+        direction TB
+        B --> B1[运营部]
+        B --> B2[算法与竞赛部]
+        B --> B3[开发部]
+        B --> B4[维护部]
+        B --> B5[办公室]
+    end
+    A --> C[技术委员会]
+    A --> D[特别兴趣小组]
 ```
 
 #### 5.2 管理团队
@@ -260,8 +266,9 @@ graph TB;
 ##### 7.2.4 身份义务
 
 - 遵守中国相关法律法规及本社区章程。
-- 不得公开发布盗版、未授权和虚假内容；不得公开讨论时事政治。
-- 尊重他人，遵守网络礼仪，维护社区良好氛围。
+- 禁止传播违反法律法规及公序良俗的内容。
+- 不得公开讨论时事政治。
+- 遵守线下与网络礼仪，维护社区良好氛围。
 - 积极参与社区活动，弘扬开源精神。
 
 ---
@@ -379,7 +386,7 @@ graph TB;
 ##### 7.7.1 身份获取
 
 - 需要先满足社区志愿者身份获取条件。
-- 无偿赠予社区资金、正版商业软件、计算机相关硬件、基础设施服务等。
+- 无偿赠予社区资金、正版商业软件、计算机相关硬件、基础设施服务等，赠予资产需附带权属证明及使用授权书。
 - 满足以上条件后经审核自动获取。
 
 ##### 7.7.2 身份移除
@@ -425,7 +432,8 @@ graph TB;
 
 ##### 7.8.4 身份义务
 
-- 不得干预社区内部管理与发展计划。
+- 遵守中国法律法规
+- 赞助行为不获得社区决策权，不得干预社区内部管理与发展计划。
 
 ---
 
@@ -454,6 +462,9 @@ graph TB;
 | 技术分享演讲 | 8 分/场       | 季度上限 40 分   |
 | 课程录制     | 15 分/套      | 年度上限 60 分  |
 | 活动主策划与主执行 | 5 分/次    | 年度上限 50 分  |
+
+- 积分复核：积分由技术委员会复核，造假行为扣减双倍积分
+- 争议贡献由理事会终裁
 
 #### 8.3 贡献评价
 
@@ -494,7 +505,8 @@ graph TB;
 ### 第 十 条&nbsp;&nbsp;&nbsp;&nbsp;纠纷与监督<a id=article-10-zh-cn></a>
 
 - 成立仲裁小组（理事、法务顾问、技术委员会代表）处理纠纷。  
-- 违规处理：举报→初审→仲裁→公示处罚。  
+- 监督与处罚流程：举报→初审→处理决定→公示。  
+- 处罚分级：书面警告→暂停权限→解除成员身份→涉嫌违法则移交司法机关
 - 处罚措施：警告、暂停贡献、移除社区直至法律追究。
 
 
@@ -503,14 +515,14 @@ graph TB;
 
 ### 第 十一 条&nbsp;&nbsp;&nbsp;&nbsp;资产管理<a id=article-11-zh-cn></a>
 
-#### 10.1 资产存放
+#### 11.1 资产存放
 
 - **软硬件设施**：维护部管理，财务办备案。
 - **多媒体矩阵**：运营部管理，相关收支由财务办审核。
 - **资金**：财务办统一管理，按流程申请发放。
 - **其他资产**：综合办管理，财务办备案。
 
-#### 10.2 审计与清算
+#### 11.2 审计与清算
 
 - **审计**：每季度审计，于年度大会上发布年度审计结果和下一年预算计划。
 - **收支**：社区资产统一归属集体，仅用于社区活动及发展。
@@ -539,8 +551,9 @@ graph TB;
 ---
 
 
-### 第 十四 条&nbsp;&nbsp;&nbsp;&nbsp;信息公开<a id=article-14-zh-cn></a>
+### 第 十四 条&nbsp;&nbsp;&nbsp;&nbsp;信息收集与公开<a id=article-14-zh-cn></a>
 
+- 个人信息处理遵循《个人信息保护法》，收集前需单独授权。
 - 社区活动、决议、财务及开源项目进展等信息应及时公开，接受全体成员监督。
 - 保护成员个人隐私信息安全，最小化个人信息采集，尽可能使用技术手段避免信息泄露。
 
@@ -579,6 +592,7 @@ graph TB;
 ### 第 十八 条&nbsp;&nbsp;&nbsp;&nbsp;章程修订<a id=article-18-zh-cn></a>
 
 #### 18.1 修订流程
+
 ```mermaid
 flowchart LR
   A[社区成员提案] --> B[定时汇总]
@@ -595,6 +609,7 @@ flowchart LR
     I --> E
   end
 ```
+
 #### 18.2 同意修订门槛
 
 支持票 ≥ 总投票权成员的2/3
@@ -602,7 +617,7 @@ flowchart LR
 #### 18.3 编写要求
 
 - 原始文件采用GitHub Flavored Markdown语言编写，正式分发文件采用PDF格式并对文本进行视觉优化适配。
-- 原始文件内容采用 `章-条-款-项-目` 层级结构组织，从款级开始采用点分十进制编号。
+- 正式分发文件的内容采用 `章-条-款-项-目` 层级结构进行组织，原始文件从款级开始采用点分十进制编号。
 - 原始文件的变更应使用 Git 等**版本控制**工具并发布至公开版本管理平台，当前拉取地址为 `https://github.com/BUCM-Community/community-info.git`。
 - 原始文件版本号遵循语义化版本规则，具体如下：
     - 内部版本号样式： `Major.Minor.Patch-Status`
@@ -615,8 +630,36 @@ flowchart LR
 
 ---
 
+### 第 十九 条&nbsp;&nbsp;&nbsp;&nbsp;社区解散<a id=article-19-zh-cn></a>
 
-### 第 十九 条&nbsp;&nbsp;&nbsp;&nbsp;生效与解释权<a id=article-19-zh-cn></a>
+#### 19.1 解散启动
+
+- 连续2年活跃成员不足50人  
+- 无法维持基本运营超过6个月  
+
+#### 19.2 解散流程
+
+```mermaid
+flowchart LR
+  A[启动条件达成] --> B[解散工作组成立]
+  B --> C[资产清算]
+  C --> D[利益分配规划]
+  D --> E[解散工作草案公示]
+
+  subgraph 投票流程
+    direction TB
+    E --> F[全体投票]
+    F --> G{投票结果}
+    G -->|通过| H[执行方案]
+    G -->|不通过| I[修改草案]
+    I --> E
+  end
+```
+
+---
+
+
+### 第 二十 条&nbsp;&nbsp;&nbsp;&nbsp;生效与解释权<a id=article-20-zh-cn></a>
 
 - 本章程自投票表决通过之日起生效，最终解释权归本社区管理团队所有。
 - 本章程以 署名-非商业性使用-相同方式共享 4.0 协议国际版 发布([CC BY-NC-SA 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans))。要查看该协议的副本，请访问 https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans 。
@@ -625,7 +668,7 @@ flowchart LR
 ---
 
 
-### 第 二十 条&nbsp;&nbsp;&nbsp;&nbsp;章程修订表决情况<a id=article-20-zh-cn></a>
+### 第 二十一 条&nbsp;&nbsp;&nbsp;&nbsp;章程修订表决情况<a id=article-21-zh-cn></a>
 
 ---
 
@@ -663,8 +706,9 @@ _**NOTE**：The English translation edition will be added before the official re
     - [*Article 17 违纪违规处理*](user-content-article-17-en-us)
 - [**Chapter 4 附则**](user-content-chapter-4-en-us)
     - [*Article 18 章程修订*](user-content-article-18-en-us)
-    - [*Article 19 生效与解释权*](user-content-article-19-en-us)
-    - [*Article 20 章程修订表决情况*](user-content-article-20-en-us)
+    - [*Article 19 社区解散*](user-content-article-19-en-us)
+    - [*Article 20 生效与解释权*](user-content-article-20-en-us)
+    - [*Article 21 章程修订表决情况*](user-content-article-21-en-us)
 
 </details>
 
